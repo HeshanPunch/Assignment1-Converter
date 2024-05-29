@@ -17,29 +17,46 @@
     >
       <div class="flex sm:flex-row">
         <button
-          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-28 m-2"
         >
           Weight
         </button>
         <button
-          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-28 m-2"
         >
           Distance
         </button>
         <button
-          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-28 m-2"
         >
           Temperature
         </button>
       </div>
       <div>
         <form class="flex flex-col" action="">
-          <label for="convertA" class="mt-8">lb</label>
+          <!-- <label for="convertA" class="mt-8">lb</label>
           <input id="convertA" class="border border-gray-300 mb-4 text-3xl" type="text" />
 
           <label for="convertB" class="mt-8">kg</label>
-          <input id="convertB" class="border border-gray-300 mb-4 text-3xl" type="text" />
-
+          <input id="convertB" class="border border-gray-300 mb-4 text-3xl" type="text" /> -->
+          <div>
+            <div class="relative mt-2 rounded-md shadow-sm">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+              </div>
+              <input
+                type="text"
+                name="price"
+                id="price"
+                class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="0"
+              />
+              <div class="absolute inset-y-0 right-0 flex items-center">
+                <span id="unitA" class=" rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">KG</span>
+              </div>
+            </div>
+          </div>
           <h4 id="convertedValue"></h4>
         </form>
       </div>
