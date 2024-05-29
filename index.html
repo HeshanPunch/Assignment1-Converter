@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+  </head>
+  <body>
+    <!-- - The website must be made responsive using Tailwind CSS.
+        - Create three tabs within the navbar of the website: Weight, Distance and Temperature.
+        - Each tab must have a form to convert from the metric unit to the imperial unit, and vice versa.
+        - The form must contain the functionality to convert a single value and an array list of values.
+        - Use Tailwind CSS for all the components on the website (e.g., navbar, tabs, forms)
+    -->
+    <div
+      class="flex flex-col items-center justify-center w-full max-w-lg mx-auto min-h-screen"
+    >
+      <div class="flex sm:flex-row">
+        <button
+          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+        >
+          Weight
+        </button>
+        <button
+          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+        >
+          Distance
+        </button>
+        <button
+          class="bg-slate-700 rounded-md p-2 text-slate-50 w-28 text-center mx-2 m-2"
+        >
+          Temperature
+        </button>
+      </div>
+      <div>
+        <form class="flex flex-col" action="">
+          <label for="convertA" class="mt-8">lb</label>
+          <input id="convertA" class="border border-gray-300 mb-4 text-3xl" type="text" />
+
+          <label for="convertB" class="mt-8">kg</label>
+          <input id="convertB" class="border border-gray-300 mb-4 text-3xl" type="text" />
+
+          <h4 id="convertedValue"></h4>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
 </html>
