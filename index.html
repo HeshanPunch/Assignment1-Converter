@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Converter</title>
 </head>
-<body>
-    
+<body class="bg-slate-950 font-sans overflow-x-hidden">
+    <nav class="container flex text-black font-semibold">
+        <p class="flex-2 text-center text-2xl p-3 border-r-4 border-r-black font-normal pl-10 pr-10 bg-blue-600">C V T</p>
+        <a id="weightTab" onclick="onTabClicked('weight')" class="flex-1 text-center text-2xl p-3 border-r-4 border-r-black bg-amber-400">Weight</a>
+        <a id="temperatureTab" onclick="onTabClicked('temperature')" class="flex-1 text-center text-2xl p-3 border-r-4 border-r-black bg-blue-600 hover:bg-blue-400">Temperature</a>
+        <a id="distanceTab" onclick="onTabClicked('distance')" class="flex-1 text-center text-2xl p-3 bg-blue-600 hover:bg-blue-400">Distance</a>
+    </nav>
+
+    <main id="mainDiv" class="container text-white mt-10 mb-10">
+        <div class="container flex text-3xl">
+            <div class="w-1/6"></div>
+            <p class="w-3/6 align-center">Convert weight value(s) from:</p>
+            <select id="unitsFrom" onchange="onChangeOriginUnits(this)" class="w-1/6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected value="kg" class="">Kg</option>
+                <option value="lb">Lb</option>
+              </select>
+              <div class="w-1/6"></div>
+        </div>
+
+        <p class="text-3xl text-center mt-10 mb-5">Value(s) to convert:</p>
+        <div class="container text-black text-3xl flex justify-evenly flex-wrap">
+            <div class="flex-1/3 m-4 valueWrapper">
+                <input class="w-60 valueInput"/>
+                <button onclick="onDeleteClicked(this)" class="bg-gray-400 font-semibold deleteButton">&nbsp&nbspX&nbsp&nbsp</button>
+                <button onclick="onAddClicked(this)" class="bg-amber-400 hover:bg-amber-200 font-semibold addButton">&nbsp&nbspAdd&nbsp&nbsp</button>
+            </div>
+        </div>
+
+        <div class="container flex text-3xl mt-10">
+            <div class="w-1/6"></div>
+            <p class="w-3/6 align-center">Convert weight value(s) to:</p>
+            <select id="unitsTo" class="w-1/6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected value="lb" class="">Lb</option>
+              </select>
+              <div class="w-1/6"></div>
+        </div>
+        
+        <div class="container mt-10 min-w-full flex flex-col items-center">
+            <button onclick="onConvertValuesClicked()" class="bg-blue-600 text-black hover:bg-blue-400 font-semibold text-2xl py-2 px-4 rounded mb-5">Convert</button>
+        </div>
+    </main>
+
+    <script src="logic.js"></script>
 </body>
 </html>
