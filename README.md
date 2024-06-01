@@ -6,6 +6,12 @@
 
 In this assignment, you’ll build a responsive static website to convert between metric units and imperial units (i.e., between kilograms and pounds, kilometres and miles, and Celsius and Fahrenheit).
 
+## How to run locally
+- This is not hosted yet
+1. Open in VSCode
+2. Use Live Server to run it, or use alternate way
+
+
 ## Instructions
 
 As indicated by your instructor, review the mathematical equations required to perform the following unit conversions:
