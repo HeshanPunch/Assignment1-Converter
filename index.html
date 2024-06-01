@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unit Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+
+<body class="bg-gray-800">
+
+    <nav class="bg-indigo-500 p-4">
+        <ul class="flex justify-around">
+            <li><a href="#weight" class="text-white">Weight</a></li>
+            <li><a href="#distance" class="text-white">Distance</a></li>
+            <li><a href="#temperature" class="text-white">Temperature</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mx-auto p-4 justify-center items-center h-screen">
+        <div>
+            <!-- Weight Converter -->
+            <div id="weight" class="tab-content">
+                <h2 class="text-2xl mb-4 text-white text-center">Weight Converter</h2>
+                <form id="weightForm" class="mb-4">
+                    <label for="weightValue" class="block mb-2 text-white text-center">Value:</label>
+                    <input type="text" id="weightValue" class="p-2 border rounded mb-2 w-full" placeholder="Enter value">
+                    <!-- Dropdown -->
+                    <div class="flex justify-between mb-2">
+                        <select id="weightUnitFrom" class="p-2 border mb-2 w-full">
+                            <option value="lb">Pounds</option>
+                            <option value="kg">Kilograms</option>
+                        </select>
+                        <select id="weightUnitTo" class="p-2 border mb-2 w-full">
+                            <option value="kg">Kilograms</option>
+                            <option value="lb">Pounds</option>
+                        </select>
+                    </div>
+                    <button type="button" class="bg-indigo-500 text-white p-2 rounded w-full" onclick="convert('weight')">Convert</button>
+                </form>
+                <div id="weightResult" class="text-white text-center"></div>
+            </div>
+
+            <!-- Distance Converter -->
+            <div id="distance" class="tab-content hidden">
+                <h2 class="text-2xl mb-4 text-white text-center">Distance Converter</h2>
+                <form id="distanceForm" class="mb-4">
+                    <label for="distanceValue" class="block mb-2 text-white text-center">Value:</label>
+                    <input type="text" id="distanceValue" class="p-2 border rounded mb-2 w-full" placeholder="Enter value">
+                    <!-- Dropdown -->
+                    <div class="flex justify-between mb-2">
+                        <select id="distanceUnitFrom" class="p-2 border mb-2 w-full">
+                            <option value="mi">Miles</option>
+                            <option value="km">Kilometres</option>
+                        </select>
+                        <select id="distanceUnitTo" class="p-2 border mb-2 w-full">
+                            <option value="km">Kilometres</option>
+                            <option value="mi">Miles</option>
+                        </select>
+                    </div>
+                    <button type="button" class="bg-indigo-500 text-white p-2 rounded w-full" onclick="convert('distance')">Convert</button>
+                </form>
+                <div id="distanceResult" class="text-white text-center"></div>
+            </div>
+
+            <!-- Temperature Converter -->
+            <div id="temperature" class="tab-content hidden">
+                <h2 class="text-2xl mb-4 text-white text-center">Temperature Converter</h2>
+                <form id="temperatureForm" class="mb-4">
+                    <label for="temperatureValue" class="block mb-2 text-white text-center">Value:</label>
+                    <input type="text" id="temperatureValue" class="p-2 border rounded mb-2 w-full" placeholder="Enter value">
+                    <!-- Dropdown -->
+                    <div class="flex justify-between mb-2">
+                        <select id="temperatureUnitFrom" class="p-2 border mb-2 w-full">
+                            <option value="c">Celsius</option>
+                            <option value="f">Fahrenheit</option>
+                        </select>
+                        <select id="temperatureUnitTo" class="p-2 border mb-2 w-full">
+                            <option value="f">Fahrenheit</option>
+                            <option value="c">Celsius</option>
+                        </select>
+                    </div>
+                    <button type="button" class="bg-indigo-500 text-white p-2 rounded w-full" onclick="convert('temperature')">Convert</button>
+                </form>
+                <div id="temperatureResult" class="text-white text-center"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
 </body>
 </html>
+
